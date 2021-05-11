@@ -14,7 +14,8 @@
       </ul>
     </div>
     <keep-alive>
-      <component :is="schedulingComponent" :contentId="contentId"></component>
+      <component :is="schedulingComponent" :contentId="contentId"
+      :disableDateScheduling="disableDateScheduling"></component>
     </keep-alive>
   </div>
 </template>
@@ -33,6 +34,10 @@ export default {
     contentId: {
       type: Number,
       required: true,
+    },
+    disableDateScheduling: {
+      type: Boolean,
+      default: false,
     },
   },
 
