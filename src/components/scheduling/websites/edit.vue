@@ -19,7 +19,7 @@
           @change="setOption"
         />
       </div>
-      <div v-if="!disableDateScheduling" class="bmc-schedule-field">
+      <div v-if="dateSchedulingEnabled" class="bmc-schedule-field">
         <edit-date
           :value="currentStartDate"
           :max="currentEndDate"
@@ -29,7 +29,7 @@
           @change="setStartDate"
         />
       </div>
-      <div v-if="!disableDateScheduling" class="bmc-schedule-field">
+      <div v-if="dateSchedulingEnabled" class="bmc-schedule-field">
         <edit-date
           :value="currentEndDate"
           :min="currentStartDate"
@@ -96,9 +96,9 @@ export default {
       type: Date,
       default: null,
     },
-    disableDateScheduling: {
+    dateSchedulingEnabled: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
 

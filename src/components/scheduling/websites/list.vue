@@ -31,7 +31,7 @@
         :option="schedule.option"
         :start-date="schedule.startDate"
         :end-date="schedule.endDate"
-        :disableDateScheduling="disableDateScheduling"
+        :dateSchedulingEnabled="dateSchedulingEnabled"
       />
     </div>
   </div>
@@ -53,9 +53,9 @@ export default {
       type: Number,
       required: true,
     },
-    disableDateScheduling: {
+    dateSchedulingEnabled: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
 

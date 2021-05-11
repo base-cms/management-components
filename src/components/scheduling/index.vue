@@ -14,8 +14,7 @@
       </ul>
     </div>
     <keep-alive>
-      <component :is="schedulingComponent" :contentId="contentId"
-      :disableDateScheduling="disableDateScheduling"></component>
+      <component :is="schedulingComponent" v-bind="schedulingProps" />
     </keep-alive>
   </div>
 </template>
@@ -35,9 +34,9 @@ export default {
       type: Number,
       required: true,
     },
-    disableDateScheduling: {
+    dateSchedulingEnabled: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
 
@@ -65,6 +64,13 @@ export default {
     schedulingComponent() {
       const { component } = this.items.find(({ id }) => id === this.selected);
       return component;
+    },
+    schedulingProps() {
+      // eslint-disable-next-line no-shadow
+      const { id } = this.items.find(({ id }) => id === this.selected);
+      const props = { contentId: this.contentId };
+      if (id !== 'websites') return props;
+      return { ...props, dateSchedulingEnabled: this.dateSchedulingEnabled };
     },
   },
 
