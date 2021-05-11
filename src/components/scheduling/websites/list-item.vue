@@ -7,7 +7,7 @@
     :option="option"
     :start-date="start"
     :end-date="end"
-    :disableDateScheduling="disableDateScheduling"
+    :dateSchedulingEnabled="dateSchedulingEnabled"
     @cancel="exitEditMode"
     @update="exitEditMode"
   />
@@ -19,8 +19,8 @@
       <div class="bmc-schedule-list__schedule-name">
         {{ section.fullName }} ({{ option.name }})
       </div>
-      <display-date v-if="!disableDateScheduling" :value="start" label="Starts" />
-      <display-date v-if="!disableDateScheduling" :value="end" label="Ends" />
+      <display-date v-if="dateSchedulingEnabled" :value="start" label="Starts" />
+      <display-date v-if="dateSchedulingEnabled" :value="end" label="Ends" />
       <operation-error
         :error="error"
         wrapper-class="bmc-operation-error--margin-top"
@@ -85,9 +85,9 @@ export default {
       type: Number,
       default: null,
     },
-    disableDateScheduling: {
+    dateSchedulingEnabled: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
 
