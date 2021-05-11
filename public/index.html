@@ -52,8 +52,8 @@
   <body>
     <script>
       bmc('configure', {
-        graphqlUri: 'https://gemenon.graphql.base-cms.io',
-        tenantKey: 'ebm_electronicdesign',
+        graphqlUri: 'https://caprica.graphql-staging.base-cms.io',
+        tenantKey: 'acbm_fcp',
         baseApiUri: 'https://manage.forconstructionpros.com',
         debug: true,
       });
@@ -61,7 +61,7 @@
       bmc('loadComponent', {
         name: 'scheduling',
         el: '#component-scheduling',
-        props: { contentId: 21808830, dateSchedulingEnabled: true },
+        props: { contentId: 21091788 },
       });
 
       bmc('loadComponent', {
