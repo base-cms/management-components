@@ -36,7 +36,7 @@ export default {
     },
     dateSchedulingEnabled: {
       type: Boolean,
-      default: true,
+      default: false,
     },
   },
 
@@ -70,7 +70,7 @@ export default {
       const { id } = this.items.find(({ id }) => id === this.selected);
       const props = { contentId: this.contentId };
       if (id !== 'websites') return props;
-      return { ...props, dateSchedulingEnabled: this.dateSchedulingEnabled };
+      return { ...props, 'date-scheduling-enabled': this.dateSchedulingEnabled };
     },
   },
 

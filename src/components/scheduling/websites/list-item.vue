@@ -7,7 +7,7 @@
     :option="option"
     :start-date="start"
     :end-date="end"
-    :dateSchedulingEnabled="dateSchedulingEnabled"
+    :date-scheduling-enabled="dateSchedulingEnabled"
     @cancel="exitEditMode"
     @update="exitEditMode"
   />

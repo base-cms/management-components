@@ -31,7 +31,7 @@
         :option="schedule.option"
         :start-date="schedule.startDate"
         :end-date="schedule.endDate"
-        :dateSchedulingEnabled="dateSchedulingEnabled"
+        :date-scheduling-enabled="dateSchedulingEnabled"
       />
     </div>
   </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="bmc-schedule-tab">
-    <create-schedules :content-id="contentId" :dateSchedulingEnabled="dateSchedulingEnabled"/>
-    <list-schedules :content-id="contentId" :dateSchedulingEnabled="dateSchedulingEnabled"/>
+    <create-schedules :content-id="contentId"/>
+    <list-schedules :content-id="contentId" :date-scheduling-enabled="dateSchedulingEnabled"/>
   </div>
 </template>
 
