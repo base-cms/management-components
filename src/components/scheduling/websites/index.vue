@@ -1,7 +1,7 @@
 <template>
   <div class="bmc-schedule-tab">
-    <create-schedules :content-id="contentId" />
-    <list-schedules :content-id="contentId" />
+    <create-schedules :content-id="contentId"/>
+    <list-schedules :content-id="contentId" :date-scheduling-enabled="dateSchedulingEnabled"/>
   </div>
 </template>
 
@@ -17,6 +17,10 @@ export default {
     contentId: {
       type: Number,
       required: true,
+    },
+    dateSchedulingEnabled: {
+      type: Boolean,
+      default: true,
     },
   },
 

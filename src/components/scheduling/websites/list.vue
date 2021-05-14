@@ -31,6 +31,7 @@
         :option="schedule.option"
         :start-date="schedule.startDate"
         :end-date="schedule.endDate"
+        :date-scheduling-enabled="dateSchedulingEnabled"
       />
     </div>
   </div>
@@ -51,6 +52,10 @@ export default {
     contentId: {
       type: Number,
       required: true,
+    },
+    dateSchedulingEnabled: {
+      type: Boolean,
+      default: true,
     },
   },
 
